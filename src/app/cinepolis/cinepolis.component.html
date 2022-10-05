@@ -1,0 +1,84 @@
+<body>
+    
+<div class="container-fluid con-1" id="fondo"></div><div class="col-12">
+    <div class="form-group row">
+        <div class="col-6">
+            <div class="col-12 my-3" align="center">
+                <h3>Entradas</h3>
+            </div>
+            
+            
+            <div class="input-group input-group-sm mb-3">
+                <span class="input-group-text" id="inputGroup-sizing-sm">Nombre</span>
+                <input type="text"  [(ngModel)]="nom" name="nom" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
+            </div>
+            <div class="input-group input-group-sm mb-3">
+                <span class="input-group-text" id="inputGroup-sizing-sm">Cantidad de compradores</span>
+                <input type="text" [(ngModel)]="canti" name="canti" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" [(ngModel)]="tarjeta"  value="si" name="tarjeta" id="flexCheckDefault">
+                <label class="form-check-label" for="flexCheckDefault">
+                    Si
+                </label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" [(ngModel)]="tarjeta"  value="no" name="tarjeta" id="flexCheckChecked" checked>
+                <label class="form-check-label" for="flexCheckChecked">
+                    No
+                </label>
+            </div>
+            <div class="input-group input-group-sm mb-3">
+                <span class="input-group-text" id="inputGroup-sizing-sm">Cantidad boletos</span>
+                <input type="text" [(ngModel)]="bole" name="bole" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
+            </div>
+            
+            <div><button class="btn btn-primary btn-sm" (click)="calcular()">Enter</button></div> 
+            <br>
+            <div><button class="btn btn-primary btn-sm" (click)="cancelar()">Cancel</button></div>
+
+        </div>
+        <div class="col-6">
+            <div class="col-12 my-3" align="center">
+                <h3>Salidas</h3>
+            </div>
+            <div class="input-group input-group-sm mb-3">
+                <span class="input-group-text" id="inputGroup-sizing-sm">Valor a pagar</span>
+                <input type="text" class="form-control" [(ngModel)]="total" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" value="{{total}}" readonly>
+            </div>
+            <div>Nombre:
+                {{nom}}</div>
+                <div>Cantidad compradores: {{canti}}</div>
+                <div>Cantidad boletas: {{bole}} </div>
+                
+        </div>
+        <br>
+        <div>{{mensaje}}</div>
+    </div>
+</div>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+</body>
+<!-- <div> style="width: 800px; height: 400px; border 1px black solid; "</div>
+<div> style="background: url('') no-repeat; background-size: cover;"</div>    -->
+
+
+
+
+<!-- 
+nombre<input type="text"><br>
+<input type="number">cantidad provedores<br>
+<input type="radio">tarje si<br>
+<input type="radio">tarje no<br>
+<input type="number">cantidad boletos<br>
+<button>Aceptar</button>
+
+ -->

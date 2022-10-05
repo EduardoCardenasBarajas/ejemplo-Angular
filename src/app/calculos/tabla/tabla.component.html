@@ -1,0 +1,20 @@
+<div class="row">
+    <div class="col-6"> 
+     <div class="mb-3 row">
+        <label for="nume1" class="col-sm-2 col-form-label">Numero</label>
+        <div class="col-sm-10">
+          <input type="text" [(ngModel)]="nume1" name="nume1" class="form-control" id="nume1">
+        </div>
+      </div>
+    </div>
+</div>
+<div class="mb-3 row">
+  <button (click)="multipli()"  class="btn btn-primary">Calcular</button>
+</div>
+<div class="col-6">
+    <div>Resultado</div>
+  <div *ngFor="let resul of resul">
+    {{resul}}
+    </div>
+</div>
+
